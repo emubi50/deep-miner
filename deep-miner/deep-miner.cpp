@@ -2,17 +2,18 @@
 //
 
 #include <iostream>
+#include "Game.h"
 
 int main()
 {
+	Game game = Game();
 	do
 	{
-		system("cls");
 		std::cout << "Deep Miner\n";
 		std::cout << "Press ENTER to start the game.\n";
 		std::cin.get();
 	} while (std::cin.fail());
-	
+	game.run();
 	return 0;
 }
 

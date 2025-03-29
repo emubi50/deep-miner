@@ -1,16 +1,23 @@
 #pragma once
 #include "World.h"
-#include "BaseMiner.h"
+#include "BaseBot.h"
+using std::cout;
+using std::cin;
+using std::string;
+
 class Game
 {
 public:
 	Game();
 	~Game();
-	void generateWorld();
 	void rearrangeWorld();
 	void run();
+	void selectBotType();
+	void clear();
 private:
+	string OS;
+	bool debugMode;
 	World world;
-	BaseMiner* miners;
+	vector<BaseBot*> bots; // all exisitng bots stored in this dynamic array
 };
 
